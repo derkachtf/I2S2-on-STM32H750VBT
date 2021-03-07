@@ -1,0 +1,4 @@
+savebin src\build\test_read.bin, 0x00, 0x40000
+r
+g
+q

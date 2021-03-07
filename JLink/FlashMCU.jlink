@@ -1,0 +1,7 @@
+r
+h
+loadbin build\SPH0645_H750.bin, 0x08000000
+g
+verifybin build\SPH0645_H750.bin, 0x08000000
+r
+q
