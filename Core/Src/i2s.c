@@ -84,11 +84,10 @@ void HAL_I2S_MspInit(I2S_HandleTypeDef* i2sHandle)
     __HAL_RCC_GPIOB_CLK_ENABLE();
     /**I2S2 GPIO Configuration
     PC1     ------> I2S2_SDO
-    PC2_C     ------> I2S2_SDI
     PB10     ------> I2S2_CK
     PB12     ------> I2S2_WS
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_1|GPIO_PIN_2;
+    GPIO_InitStruct.Pin = GPIO_PIN_1;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
@@ -121,11 +120,10 @@ void HAL_I2S_MspDeInit(I2S_HandleTypeDef* i2sHandle)
 
     /**I2S2 GPIO Configuration
     PC1     ------> I2S2_SDO
-    PC2_C     ------> I2S2_SDI
     PB10     ------> I2S2_CK
     PB12     ------> I2S2_WS
     */
-    HAL_GPIO_DeInit(GPIOC, GPIO_PIN_1|GPIO_PIN_2);
+    HAL_GPIO_DeInit(GPIOC, GPIO_PIN_1);
 
     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_10|GPIO_PIN_12);
 
