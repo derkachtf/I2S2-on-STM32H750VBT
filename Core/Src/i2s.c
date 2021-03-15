@@ -102,7 +102,7 @@ void HAL_I2S_MspInit(I2S_HandleTypeDef* i2sHandle)
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /* USER CODE BEGIN SPI2_MspInit 1 */
-
+  SET_BIT(hi2s2.Instance->CFG2, SPI_CFG2_IOSWP);
   /* USER CODE END SPI2_MspInit 1 */
   }
 }
